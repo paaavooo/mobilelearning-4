@@ -2,14 +2,15 @@ import { initializeApp } from 'firebase/app'
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 
 const config = {
-     apiKey: "AIzaSyB-g3TttK6m0fsPhIx1MN1Ilv_TletQRa4",
-  authDomain: "mobilelab4-7fd6a.firebaseapp.com",
-  projectId: "mobilelab4-7fd6a",
-  storageBucket: "mobilelab4-7fd6a.firebasestorage.app",
-  messagingSenderId: "5603056877",
-  appId: "1:5603056877:web:d751a6487f4aca9b9240e4",
-  measurementId: "G-LP5LG01F8G"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 }
+
 const app = initializeApp(config)
 const auth = getAuth(app)
 
